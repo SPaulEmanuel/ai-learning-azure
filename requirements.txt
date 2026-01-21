@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+openai
+requests
+pydantic
+python-dotenv
+azure-ai-projects
+azure-identity
