@@ -2,14 +2,15 @@ import sys
 import os
 sys.path.append(os.path.dirname(__file__))
 
+from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException
-from fastapi.responses import JSONResponse
 from routers import azure_chatbot
 import time
 import random
 import asyncio
 
 app = FastAPI()
+load_dotenv()
 
 # Include Azure chatbot router
 app.include_router(azure_chatbot.router, prefix="/api", tags=["Azure Chatbot"])
